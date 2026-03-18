@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* CyberQuest Color Palette - Royal Navy Blue, Burnt Orange, Gold */
+    --background: 216 45% 15%;
+    --foreground: 0 0% 100%;
+
+    --card: 217 44% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 217 44% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 216 45% 15%; /* Navy Blue #1B2A49 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 92% 54%; /* Burnt Orange #F68B1E */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 32% 25%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 45 100% 64%; /* Gold #FFD700 */
+    --accent-foreground: 216 45% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 30%;
+    --input: 217 32% 25%;
+    --ring: 45 100% 64%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(216 45% 15%), hsl(217 44% 25%));
+    --gradient-mission: linear-gradient(135deg, hsl(28 92% 54%), hsl(45 100% 64%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(45 100% 64%));
+    
+    /* Glow effects */
+    --glow-orange: 0 0 40px hsl(28 92% 54% / 0.4);
+    --glow-gold: 0 0 40px hsl(45 100% 64% / 0.6);
+    
+    --sidebar-background: 216 45% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 28 92% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 32% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 32% 30%;
+    --sidebar-ring: 45 100% 64%;
+  }
+
+  .dark {
+    /* Same as light for this cyber theme */
+    --background: 216 45% 15%;
+    --foreground: 0 0% 100%;
+    --card: 217 44% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 217 44% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 216 45% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 28 92% 54%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 32% 25%;
+    --muted-foreground: 215 20% 75%;
+    --accent: 45 100% 64%;
+    --accent-foreground: 216 45% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 32% 30%;
+    --input: 217 32% 25%;
+    --ring: 45 100% 64%;
+    --sidebar-background: 216 45% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 28 92% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 32% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 32% 30%;
+    --sidebar-ring: 45 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Hide scrollbars globally */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
